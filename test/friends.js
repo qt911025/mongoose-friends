@@ -198,30 +198,30 @@ suite("friends", function() {
 
       suite("after request", function () {
         suite(".getPendingFriends", function () {
-          test("requester should have 0", check('Pending', 1, 0))
-          test("requestee should have 1", check('Pending', 0, 1))
-        })
+          test("requester should have 0", check('Pending', 1, 0));
+          test("requestee should have 1", check('Pending', 0, 1));
+        });
         suite("#getPendingFriends", function () {
-          test("requester should have 0", check('Pending', 1, 0, 1))
-          test("requestee should have 1", check('Pending', 0, 1, 1))
-        })
+          test("requester should have 0", check('Pending', 1, 0, 1));
+          test("requestee should have 1", check('Pending', 0, 1, 1));
+        });
         suite(".getAcceptedFriends", function () {
-          test("requester should have 0", check('Accepted', 1, 0))
-          test("requestee should have 0", check('Accepted', 0, 0))
-        })
+          test("requester should have 0", check('Accepted', 1, 0));
+          test("requestee should have 0", check('Accepted', 0, 0));
+        });
         suite("#getAcceptedFriends", function () {
-          test("requester should have 0", check('Accepted', 1, 0, 1))
-          test("requestee should have 0", check('Accepted', 0, 0, 1))
-        })
+          test("requester should have 0", check('Accepted', 1, 0, 1));
+          test("requestee should have 0", check('Accepted', 0, 0, 1));
+        });
         suite(".getRequestedFriends", function () {
-          test("requester should have 1", check('Requested', 1, 1))
-          test("requestee should have 0", check('Requested', 0, 0))
-        })
+          test("requester should have 1", check('Requested', 1, 1));
+          test("requestee should have 0", check('Requested', 0, 0));
+        });
         suite("#getRequestedFriends", function () {
-          test("requester should have 1", check('Requested', 1, 1, 1))
-          test("requestee should have 0", check('Requested', 0, 0, 1))
-        })
-      })
+          test("requester should have 1", check('Requested', 1, 1, 1));
+          test("requestee should have 0", check('Requested', 0, 0, 1));
+        });
+      });
 
       suite("after reciprocation", function () {
         setup(function (done) {
