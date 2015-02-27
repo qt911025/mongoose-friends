@@ -31,7 +31,7 @@ mongoose.connect("mongodb://localhost/test")
  */
 var UserSchema = new mongoose.Schema({
   name: String
-})
+});
 
 UserSchema.plugin(friends({pathName: pathname}));
 
@@ -45,8 +45,8 @@ suite("friends", function() {
   var u1, u2;
 
   function ensureUsers(done) {
-    u1 = new User({name: "Alice"})
-    u2 = new User({name: "Roger"})
+    u1 = new User({name: "Alice"});
+    u2 = new User({name: "Roger"});
     User.remove(function () {
       User.create([u1, u2], done);
     });
